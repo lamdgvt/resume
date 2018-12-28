@@ -1,20 +1,15 @@
 <template>
   <div id="app">
-    <Home/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script lang="ts">
-import Home from './components/Home.vue'
 
 export default {
-  name: 'app',
-  components: {
-    Home
-  }
-}
+  name: "app"
+};
 </script>
 
-<style lange="less">
-
+<style lange="less" scoped>
 </style>

@@ -1,21 +1,22 @@
 <template>
-  <div class="hello">
-    <el-row>
-    <el-col :span="2" :push="2">
-      <el-menu default-active="1" :collapse="true" :router="true" class="el-menu-vertical-demo">
-        <el-menu-item index="1">
+  <el-row class="home_row">
+    <el-col :span="1" :push="4" class="home_col">
+      <el-menu default-active="Name" :collapse="true" :router="true" class="el-menu-vertical-demo">
+        <el-menu-item index="Name">
           <i class="iconfont icon-icon_zhanghao"></i>
         </el-menu-item>
-        <el-menu-item index="2">
+        <el-menu-item index="Info">
           <i class="iconfont icon-icon_wangye"></i>
         </el-menu-item>
-        <el-menu-item index="3">
+        <el-menu-item index="Email">
           <i class="iconfont icon-xiaoxitongzhi"></i>
         </el-menu-item>
       </el-menu>
     </el-col>
-    </el-row>
-  </div>
+    <el-col :span="15" :push="4">
+      <router-view></router-view>
+    </el-col>
+  </el-row>
 </template>
 
 <script lang="ts">
@@ -32,6 +33,15 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
+.home_row {
+  margin-top: 120px;
+  height: 450px;
+}
+.home_col {
+  height: 100%;
+  .el-menu {
+    height: 100%;
+  }
+}
 </style>
